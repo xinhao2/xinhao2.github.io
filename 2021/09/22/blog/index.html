@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Categories, Hexo">
+    <meta name="keywords" content="blog, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Categories | Hexo</title>
+    <title>blog | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">blog</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-09-22
                 </div>
                 
 
@@ -464,7 +464,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>全局安装hexo，任意地方打开终端，输入<strong>npm i hexo-cli -g</strong> 安装Hexo</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631760866821-66eeed01-ddb6-4bd9-a5e4-c3566939819e.png" alt="img"></p>
+<p>安装完后输入<strong>hexo -v</strong>验证是否安装成功。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631760926966-32125335-cfcb-4327-a3f7-58a98281f9ec.png" alt="img"></p>
+<p>然后在合适的地方新建一个文件夹，用来存放自己的博客文件，比如存放在D:\study\blog目录下，在这里初始化我们的网站，输入<strong>hexo init</strong>初始化博客目录，有一些warning可以忽略。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761181675-598e9f7c-c24e-4301-89b1-9f3c151b5825.png" alt="img"></p>
+<p>接着输入<strong>npm install</strong>安装必备的组件（有警告没关系）</p>
+<p>这样本地的网站配置就弄好了，在命令行输入<strong>hexo g</strong>生成静态网页</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761296169-d79ea88a-d919-475c-854a-8308caaaea4c.png" alt="img">然后输入<strong>hexo s</strong> 启动一个本地服务器，端口默认4000</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761325199-8028b902-df7d-40c1-bf20-769ad184d7b0.png" alt="img"></p>
+<p>浏览器打开<a href="https://link.zhihu.com/?target=http://localhost:4000/">http://localhost:4000/</a>，就可以看到我们的博客啦，效果如下：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761353495-e980a80c-ed20-4c30-b48f-6e7ede461427.png" alt="img"></p>
+<p><strong>按<strong><strong>ctrl+c</strong></strong>关闭本地服务器！</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762147048-7e653469-2189-4308-a87d-fc4f6812f0f0.png" alt="img"></p>
+<h2 id="连接Github与本地"><a href="#连接Github与本地" class="headerlink" title="连接Github与本地"></a>连接Github与本地</h2><p>首先右键打开git bash，然后输入下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的githb用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的github邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后生成密钥SSH key：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的github邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开<a href="https://link.zhihu.com/?target=http://github.com/">github</a>，在头像下面点击settings，再点击SSH and GPG keys，新建一个SSH，名字随便，把用户目录下**.ssh/id_rsa.pub<strong>的内容复制进去，确定 <strong>Add SSH key</strong>保存</strong>。**</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761557086-d9baf105-7f4b-450a-b24f-ef7d70bec3cf.png" alt="img"></p>
+<p>本地命令行输入<strong>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a></strong>，如果如下图所示，出现你的用户名，那就成功了。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761626106-800b9a3c-4cc8-4f5c-8248-77589b32040e.png" alt="img"></p>
+<p>打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客相关的各种信息。</p>
+<p>修改最后一行的配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:mqxu/mqxu.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>repository修改为你自己的github项目地址。</p>
+<h2 id="写文章、发布文章"><a href="#写文章、发布文章" class="headerlink" title="写文章、发布文章"></a>写文章、发布文章</h2><p>用VSCode打开blog目录。</p>
+<p>用命令安装一个扩展<strong>npm i hexo-deployer-git ，用于向git仓库发布内容</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761805708-f2bde123-8c43-4d54-87bb-6b7949672551.png" alt="img"></p>
+<p>然后输入命令 **hexo new post “hello”**，新建一篇文章，就会在博客的source/_posts目录多出一个hello.md文件，就可以写自己的内容了。</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631761899805-ae51c044-14af-4b96-ba7e-3e1dc922ed48.png" alt="img"></p>
+<p>简单编辑一下hello.md</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762243841-3ea5051e-b6de-4209-956a-9f99f6b26802.png" alt="img"></p>
+<p>根目录命令行，输入<strong>hexo g</strong>生成静态网页</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762081216-93ee0bdd-c734-403c-9b48-28e19eb0f253.png" alt="img"></p>
+<p><strong>输入<strong><strong>hexo s  ，</strong></strong>然后</strong>本地浏览器预览效果</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762169018-e2eff013-36f3-4664-9206-2493d843254b.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762226858-d8818646-8011-4c17-bd7a-b9dbcadcf8a7.png" alt="img"></p>
+<p>最后输入<strong>hexo d</strong>上传到github上</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762453426-3b91dde0-843c-40b2-b680-18e537164486.png" alt="img"></p>
+<p>这时打开你的github.io主页就能看到发布的文章啦</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631762485138-1b34e051-3bc7-4199-9260-903524016f29.png" alt="img"></p>
+<h2 id="博客个性化主题设置（matery主题）"><a href="#博客个性化主题设置（matery主题）" class="headerlink" title="博客个性化主题设置（matery主题）"></a>博客个性化主题设置（matery主题）</h2><p>下面的个性化设置主要针对的是matery主题</p>
+<p><strong>更换主题</strong></p>
+<p>这个主题比较炫酷，并且响应式更友好，点起来很舒服，功能也多很多。</p>
+<p>主题的原地址在这里：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
+<p>预览效果</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631763350559-8ed6c405-6193-4a85-8fcd-3c949b63c3a6.png" alt="img"></p>
+<p>你照着它的文档应该就可以非常简单弄出来。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631763462450-a4b00c14-bd6d-4ad8-ade9-727f3c3d1787.png" alt="img"></p>
+<p>themes文件夹在你的博客目录里，<strong>建议使用第一种方法，下载后解压改名，放到这个位置</strong></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/228333/1631766365905-b3869ead-a73c-4cd2-9b6a-9a59ad4142fa.png" alt="img"></p>
+
                 
             </div>
             <hr/>
@@ -490,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2021/09/22/blog/">http://example.com/2021/09/22/blog/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -697,18 +754,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="java">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -718,9 +774,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -729,7 +785,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -737,16 +792,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/tools/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="tools">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">tools</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -757,7 +812,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
                             </span>
                         <span class="publish-author">
                             
@@ -767,7 +822,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

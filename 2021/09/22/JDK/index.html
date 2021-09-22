@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Categories, Hexo">
+    <meta name="keywords" content="JDK, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Categories | Hexo</title>
+    <title>JDK | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">JDK</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-09-22
                 </div>
                 
 
@@ -464,7 +464,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="JDK安装与配置"><a href="#JDK安装与配置" class="headerlink" title="JDK安装与配置"></a>JDK安装与配置</h1><h2 id="一、什么是JDK"><a href="#一、什么是JDK" class="headerlink" title="一、什么是JDK"></a>一、什么是JDK</h2><p>JDK是Java语言的软件开发工具包，主要用于移动设备、嵌入式设备上的java应用程序。JDK是整个java开发的核心，它包含了JAVA的运行环境（JVM+Java系统类库）和JAVA工具。</p>
+<h2 id="二、Open-JDK-与-Oracle-JDK"><a href="#二、Open-JDK-与-Oracle-JDK" class="headerlink" title="二、Open JDK 与 Oracle JDK"></a>二、Open JDK 与 Oracle JDK</h2><p>OpenJDK是Sun在2006年末把Java开源而形成的项目，这里的“开源”是通常意义上的源码开放形式，即源码是可被复用的，例如IcedTea、UltraViolet都是从OpenJDK源码衍生出的发行版。</p>
+<p>Oracle JDK采用了商业实现，而OpenJDK使用的是开源的FreeType。当然，“相同”是建立在两者共有的组件基础上的，Oracle JDK中还会存在一些Open JDK没有的、商用闭源的功能，例如从JRockit移植改造而来的Java Flight Recorder。预计以后JRockit的MissionControl移植到HotSpot之后，也会以Oracle JDK专有、闭源的形式提供。</p>
+<h2 id="两者之间的区别"><a href="#两者之间的区别" class="headerlink" title="两者之间的区别"></a>两者之间的区别</h2><ol>
+<li><p> Oracle JDK更新较慢， OpenJDK更新较快 </p>
+</li>
+<li><p>Oracle JDK注重稳定性，偏向企业级用户。而OpenJDK则是支持其他性别，所以不够稳定 </p>
+</li>
+<li><p>Oracle JDK是根据二进制代码许可协议获得许可，而OpenJDK根据GPL va许可获得许可 </p>
+</li>
+<li><p> Oracle JDK不开源，OpenJDK开源 </p>
+</li>
+<li><p>顶级公司正在使用Oracle JDK，例如：Android Studio, Minecraft和IntelliJ IDEA开发工具，Open JDK 不太受欢迎 </p>
+</li>
+<li><p> Oracle JDK具有良好的GC选项和更好的渲染器，而OpenJDK具有更少的GC选项，并且由于其包含自己的渲染器的分布，因此具有较慢的图形渲染器选项。 </p>
+</li>
+</ol>
+<h2 id="三、JDK安装与配置"><a href="#三、JDK安装与配置" class="headerlink" title="三、JDK安装与配置"></a>三、JDK安装与配置</h2><p><strong>Mac安装参考如下附件</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.yuque.com/attachments/yuque/0/2021/pdf/2638392/1631438834082-7ca4e476-b160-449c-a4fb-219087fa791b.pdf">📎Mac JDK和IDEA安装.pdf</a></p>
+<p><strong>Windows安装如下</strong></p>
+<p>我们更推荐使用<em><strong>OpenJDK</strong></em>，接下来教大家在<strong>Windows</strong>上安装<strong>OpenJDK</strong>。</p>
+<h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h3><p>OpenJDK下载地址：<a target="_blank" rel="noopener" href="https://adoptopenjdk.net/?variant=openjdk8&amp;jvmVariant=hotspot">https://adoptopenjdk.net/?variant=openjdk8&amp;jvmVariant=hotspot</a></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424795551-c35f3311-491b-4bc9-bae7-491f3ed210c9.png" alt="img"></p>
+<p>进入网页后选择<strong>OpenJDK 8或11</strong>（JDK8和JDK11是长期维护版本，更加稳定），下载最新即可，下载过程可能会很慢，多尝试几次。</p>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><ul>
+<li> 首先在安装前需要确保电脑上没有其他JDK，在命令行输入<code>java -version</code>，如果有JDK请先删除，并且删除相关环境变量。</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424804229-d996a3bd-9c76-4874-95c2-c99c7fc0a041.png" alt="img"></p>
+<ul>
+<li> 确保环境干净之后，双击下载好的执行程序进行安装。在这一步时将两个红色叉的地方选择将功能安装在本地硬盘，<strong>同时可以修改安装路径，最好不要装在C盘。</strong></li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424811245-e9169ea3-aeec-4c61-823c-336fb0fceb29.png" alt="img"> <img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424815898-d833e057-0ab0-4383-8e6e-a7509643681d.png" alt="img"></p>
+<ul>
+<li> 安装完成后环境变量已经自动配置好了，可以在<code>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量</code>中查看。系统变量中添加了<strong>JAVA_HOME</strong>，以及<strong>Path</strong>变量中添加了一条记录</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424822170-cb8e7b85-4261-4cf6-96d9-1bca6666be50.png" alt="img"></p>
+<ul>
+<li> 最后在命令行分别输入<code>java -version</code>和<code>javac</code>，验证是否安装成功，如图则表示成功</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424827846-9b6cb9af-39d1-480e-8497-a9d05fdb68d1.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/2645003/1631424772882-30622ee1-37c1-4e46-a805-977f75427992.png" alt="img"></p>
+
                 
             </div>
             <hr/>
@@ -490,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2021/09/22/JDK/">http://example.com/2021/09/22/JDK/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -697,18 +738,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/IDEA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="IDEA">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">IDEA</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -718,9 +758,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -729,7 +769,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -737,16 +776,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/java/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="java">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">java</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -757,7 +796,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
                             </span>
                         <span class="publish-author">
                             
@@ -767,7 +806,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

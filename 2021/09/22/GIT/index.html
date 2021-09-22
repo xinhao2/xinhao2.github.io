@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Categories, Hexo">
+    <meta name="keywords" content="GIT, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Categories | Hexo</title>
+    <title>GIT | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">categories</h1>
+                    <h1 class="description center-align post-title">GIT</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-09-17
+                    2021-09-22
                 </div>
                 
 
@@ -464,7 +464,116 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="git安装与基础使用"><a href="#git安装与基础使用" class="headerlink" title="git安装与基础使用"></a>git安装与基础使用</h1><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。</p>
+<h2 id="一、git下载"><a href="#一、git下载" class="headerlink" title="一、git下载"></a>一、git下载</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><ul>
+<li>找到下载好的git.exe 文件，点击安装，设置安装路径（尽量不要装在C盘）</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631423060737-04d88454-4cff-421e-90ef-c49d96d98f1c.png" alt="img"></p>
+<ul>
+<li>一路点击 Next，当看到如下页面的时候，请选择第一项，表示使用Git Bash 编辑git命令</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631427212575-d95aa417-63a9-45fa-8ebd-718856921d50.png" alt="img"></p>
+<ul>
+<li>继续 Next，看到如下界面时，选择第三项，避免在后续操作中报一些警告问题。接下来一路Next，直至安装完成即可。</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631427236218-51d96513-1a86-4b3a-a570-47ff9a57871d.png" alt="img"></p>
+<h2 id="三、git环境配置"><a href="#三、git环境配置" class="headerlink" title="三、git环境配置"></a>三、git环境配置</h2><h4 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1.环境变量"></a>1.环境变量</h4><ul>
+<li>在<code>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量</code>打开环境变量, 在变量名为path的系统变量中添加你git的安装路径</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631423575405-e70fdd74-52e6-49ad-91db-762f6bf1206e.png" alt="img"></p>
+<ul>
+<li>将git安装目录中的bin目录路径放进去</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631423835916-cede25be-a68b-4909-be9d-c1327f8ca9bb.png" alt="img"></p>
+<h4 id="2-全局配置"><a href="#2-全局配置" class="headerlink" title="2.全局配置"></a>2.全局配置</h4><ul>
+<li>在任一文件夹中右击点击Git Bash Here</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631424082321-6f911606-7c50-495c-ada2-0dcc9d77edc0.png" alt="img"></p>
+<ul>
+<li>依此输入下列命令  全局配置git的用户信息，作为连接远程仓库时的用户信息（每次推送远程的用户信息就是现在设置的用户信息），用户名可以是全拼，邮箱务必真实</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;真正的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-生成公钥"><a href="#3-生成公钥" class="headerlink" title="3.生成公钥"></a>3.生成公钥</h4><ul>
+<li>生成公钥，用于连接远程仓库的钥匙 注意邮箱与上一步设置的邮箱保持一致</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;上一步设置的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631426436205-30bae1c7-455d-486a-8bac-ecd855f9756f.png" alt="img"></p>
+<ul>
+<li>成功之后你会发现，在C盘，用户目录下多了一个 .ssh 文件夹， id_rsa.pub 存放的就是你的公钥</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631426455932-d597f95a-a0d2-49f3-a073-0732f332cb4c.png" alt="img"></p>
+<ul>
+<li>公钥生成之后，必定是要连接远程仓库的，打开github，头像点击setting设置</li>
+<li>如果还没有github账号 先去github官网<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> 注册一下github</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631424845469-2bf25b70-8467-4b59-9c65-17cf2403e981.png" alt="img"></p>
+<ul>
+<li>进入setting之后，点击SSH and GPG keys选项，点击右上角New SSHkey 新增公钥</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631427080139-eb2da231-016e-4a14-9b18-30bb7f43d1e4.png" alt="img"></p>
+<ul>
+<li>将刚才生成的 id_rsa.pub 中的公钥复制到key中， Title自定义，点击 Add SSH key 新增成功</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631425047426-75a80000-4d7c-4ee7-ac54-e9b8276cf497.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631425082925-923ed0b7-3a9e-4270-b286-2a7f79930a8c.png" alt="img"></p>
+<h2 id="四、git基础命令"><a href="#四、git基础命令" class="headerlink" title="四、git基础命令"></a>四、git基础命令</h2><h4 id="提交代码准备工作"><a href="#提交代码准备工作" class="headerlink" title="提交代码准备工作"></a>提交代码准备工作</h4><ul>
+<li>在github中点击new repository新建仓库</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631425534741-830e5337-8b7a-47ff-8fa7-762ef0a97b3e.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631425861697-8c6c42bd-6d81-428f-a7bc-cf65c219e347.png" alt="img"></p>
+<ul>
+<li><p>新建后需要对项目进行初始化 会有命令提示</p>
+</li>
+<li><p>去本地文件夹中选择你要推送的目录 右击Git Bash Here打开命令界面</p>
+</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631426690794-72afe065-23b9-4f8f-a401-68f112ad01c3.png" alt="img"></p>
+<ul>
+<li>可以根据仓库后的命令提示进行初始化<img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631425562371-48e04a87-0e27-46a7-9bdb-394d7039da1a.png" alt="img"></li>
+</ul>
+<h4 id="提交示例"><a href="#提交示例" class="headerlink" title="提交示例"></a>提交示例</h4><p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631427313480-55320b83-aa17-4510-8fa2-b8fd626a7e72.png" alt="img"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631427358604-00dbc62b-9b91-4286-8e94-787ca92e514e.png" alt="img"></p>
+<h4 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h4><p>初始化仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>添加指定文件到暂存区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &quot;filename&quot;</span><br></pre></td></tr></table></figure>
+
+<p>将修改的所有文件添加到暂存区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>查看仓库状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p>提交暂存区的指定文件到仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit [filename] -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
+
+<p>提交暂存区到仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
+
+<p>添加远程仓库地址, 选择 <strong>SSH, HTTP</strong> 的话会让你每次提交都需要输入账号密码进行验证</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2021/png/297151/1631426026453-356c7963-a6e0-4892-9d79-763ff3ba36ac.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &quot;远程地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>查看仓库状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p>查看提交日志</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline</span><br></pre></td></tr></table></figure>
+
+<p>提交到指定分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<p>提交到当前分支</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<p>回撤到指定head（commit记录）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard commitId</span><br></pre></td></tr></table></figure>
+
+
                 
             </div>
             <hr/>
@@ -490,7 +599,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/categories/index.html">http://example.com/categories/index.html</a>
+                    <a href="http://example.com/2021/09/22/GIT/">http://example.com/2021/09/22/GIT/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -697,18 +806,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/npm-and-nodejs/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="npm and nodejs">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">npm and nodejs</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -718,9 +826,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -729,7 +837,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -737,16 +844,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/categories/index.html">
+                <a href="/2021/09/22/IDEA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="categories">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="IDEA">
                         
-                        <span class="card-title">categories</span>
+                        <span class="card-title">IDEA</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -757,7 +864,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
                             </span>
                         <span class="publish-author">
                             
@@ -767,7 +874,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
